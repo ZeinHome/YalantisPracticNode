@@ -7,12 +7,7 @@ const {
   ctrlWrapper,
   authenticate,
 } = require('../../middlewares');
-const {
-  register,
-  login,
-  getCurrent,
-  logout,
-} = require('../../controllers');
+const { register, login, getCurrent } = require('../../controllers');
 const { schemas } = require('../../models/user');
 
 router.post(
@@ -28,6 +23,5 @@ router.post(
 );
 
 router.get('/current', authenticate, ctrlWrapper(getCurrent));
-router.get('/logout', authenticate, ctrlWrapper(logout));
 
 module.exports = router;

@@ -3,6 +3,10 @@ const Joi = require('joi');
 
 const userSchema = new Schema(
   {
+    name: {
+      type: String,
+      required: [true, 'Name is required'],
+    },
     password: {
       type: String,
       required: [true, 'Password is required'],
@@ -21,6 +25,7 @@ const userSchema = new Schema(
 );
 
 const registerSchema = Joi.object({
+  name: Joi.string().required(),
   password: Joi.string().required(),
   email: Joi.string().required(),
 });
