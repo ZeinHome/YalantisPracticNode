@@ -8,7 +8,7 @@
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "servers": [
-    { "url": "https://YalantisPractice.onrender.com/api" },
+    { "url": "https://yalantispractice.onrender.com" },
     { "url": "http://localhost:3000/api/auth" }
   ],
   "tags": [
